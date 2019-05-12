@@ -2,17 +2,17 @@ package composite;
 
 public class Test {
     public static void main(String[] args) {
-        Department salesDepartment = new SalesDepartment(
-                1, "Sales department");
-        Department financialDepartment = new FinancialDepartment(
-                2, "Financial department");
 
-        HeadDepartment headDepartment = new HeadDepartment(
-                3, "Head department");
+        Employee emp1 = new Developer("John", 10000);
+        Employee emp2 = new Developer("David", 15000);
+        Employee manager1 = new Manager("Daniel",25000);
+        manager1.add(emp1);
+        manager1.add(emp2);
+        Employee emp3 = new Developer("Michael", 20000);
+        Manager generalManager = new Manager("Mark", 50000);
+        generalManager.add(emp3);
+        generalManager.add(manager1);
+        generalManager.print();
 
-        headDepartment.addDepartment(salesDepartment);
-        headDepartment.addDepartment(financialDepartment);
-
-        headDepartment.printDepartmentName();
     }
 }
