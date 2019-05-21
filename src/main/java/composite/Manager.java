@@ -15,6 +15,7 @@ public class Manager implements Employee{
     }
 
     List<Employee> employees = new ArrayList<Employee>();
+
     public void add(Employee employee) {
         employees.add(employee);
     }

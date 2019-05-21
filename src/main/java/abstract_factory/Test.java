@@ -7,6 +7,5 @@ public class Test {
         Animal animal = animalAbstractFactory.create("Duck");
 
         System.out.println(animal.getAnimal());
-
     }
 }
