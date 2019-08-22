@@ -1,12 +1,10 @@
 package abstract_factory;
 
+//Usually singleton
 public class AnimalFactory implements AbstractFactory<Animal> {
     @Override
-    public Animal create(String animalType) {
-        if ("Duck".equalsIgnoreCase(animalType)) {
-            return new Duck();
-        }
+    public Animal create() {
 
-        return null;
+        return new Duck();
     }
 }

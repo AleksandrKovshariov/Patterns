@@ -8,6 +8,8 @@ public class Test {
         Employee manager1 = new Manager("Daniel",25000);
         manager1.add(emp1);
         manager1.add(emp2);
+        manager1.print();
+        System.out.println("\n\n\n");
         Employee emp3 = new Developer("Michael", 20000);
         Manager generalManager = new Manager("Mark", 50000);
         generalManager.add(emp3);
